@@ -13,3 +13,8 @@ Pentagon is a cutting-edge and versatile Content Management System (CMS) designe
 |06.|&cross;|Dashboard Login and Signup Bakend and Fronted|
 |07.|&cross;|Permission Dashboard for SuperAdmin|
 |08.|&cross;|...Coming Soon, I have only thought this far. 😅|
+
+# Motivation
+
+Just read this post on reddit: 
+https://www.reddit.com/r/nextjs/comments/1amsmkk/trying_to_build_a_next_js_cms_with_typescript_ant/?utm_source=share&utm_medium=web2x&context=3

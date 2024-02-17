@@ -22,7 +22,9 @@ class MasterController implements IController {
   }
 
   private _configure() {
-    this._router.use(MASTER_ROUTES.HEALTH, this.healthController);
+    const { HEALTH } = MASTER_ROUTES;
+
+    this._router.use(HEALTH, this.healthController);
   }
 }
 

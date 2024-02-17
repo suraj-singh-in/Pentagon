@@ -6,7 +6,7 @@ Pentagon is a cutting-edge and versatile Content Management System (CMS) designe
 |Serial No.|State|Description|
 |---|---|---|
 |01.|&check;|Make github Repo and Take license|
-|02.|&cross;|NextJS code setup with Ant Design|
+|02.|&check;|NextJS code setup with Ant Design|
 |03.|&cross;|Custom Server Setup and MongoDB configuration|
 |04.|&cross;|JWT With Cookie setup for Authentication|
 |05.|&cross;|RBAC with Permission for Authorization|

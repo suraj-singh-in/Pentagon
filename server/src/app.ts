@@ -59,5 +59,4 @@ server.app.listen(process.env.PORT || 8080, () => {
 /**
  * TODO: Things to do in server
  *
- * 3. Create a way to install all depdencies from outside server
  */

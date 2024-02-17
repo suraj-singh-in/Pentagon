@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "server:installation": "npm i && npm run start:installation --prefix server",
     "server:dev": "npm run start:dev --prefix server"
   },
   "keywords": [],

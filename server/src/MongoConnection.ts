@@ -39,10 +39,7 @@ class MongoCollection {
       .connect(databaseURI)
       .then(() => {
         this.readyState = ConnectionStates[mongoose.connection.readyState];
-        console.log(
-          ">>> Pentagon Database Up; current state:",
-          this.readyState
-        );
+        console.log(">>> Pentagon Database:", this.readyState);
       })
       .catch((error: any) => {
         console.error(">>> Error Connecting to Pentagon Database: ", error);

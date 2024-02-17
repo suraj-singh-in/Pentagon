@@ -4,6 +4,12 @@ import express, { Request, Response, NextFunction } from "express";
 // Importing controllers
 import MasterRouter from "./controller/MasterController";
 
+// Importing MongoDB Connection
+require("./MongoConnection");
+
+// Importing MongoDB Schemas
+require("./MognoSchemas");
+
 // Define server
 class Server {
   // Create an Express application Instance
@@ -31,7 +37,6 @@ server.app.use(
 
 // Error Middleware in case no route is found
 server.app.use((req: Request, res: Response, next: NextFunction) => {
-  console.log("🚀 ~ server.app.use ~ req:", req.path)
   res.status(404);
 
   if (req.accepts("json")) {
@@ -54,7 +59,5 @@ server.app.listen(process.env.PORT || 8080, () => {
 /**
  * TODO: Things to do in server
  *
- * 1. Create health router for health check and deep health check
- * 2. setup MongoDB
  * 3. Create a way to install all depdencies from outside server
  */

@@ -1,5 +1,6 @@
 // Importing Libs
 import { Router, Request, Response, NextFunction } from "express";
+import mongoCollectionInstance from "../MongoConnection";
 
 export const healthCheck = (
   req: Request,
@@ -19,6 +20,7 @@ export const deepHealthCheck = (
     PID: process.pid,
     uptime: process.uptime(),
     timestamp: Date.now(),
+    databaseStatus: mongoCollectionInstance.readyState,
   };
 
   return res.status(200).json(deepHealthCheckResult);

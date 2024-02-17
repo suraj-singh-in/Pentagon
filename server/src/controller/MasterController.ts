@@ -3,7 +3,7 @@ import { Router } from "express";
 
 // Importing types
 import { IController } from "../types";
-import { MASTER_ROUTES } from "../contants";
+import { MASTER_ROUTES } from "../constants";
 
 // Importing Controllers
 import HealthController from "./HealthController";

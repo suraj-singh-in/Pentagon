@@ -44,13 +44,8 @@
     "collectCoverage": true,
     "coverageThreshold": {
       "global": {
-        "lines": 95
+        "lines": 100
       }
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test"
     }
   }
 }

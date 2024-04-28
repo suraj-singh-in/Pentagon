@@ -11,8 +11,7 @@
     "server:installation": "npm run start:installation --prefix pentagon-server",
     "server:dev": "npm run start:dev --prefix pentagon-server",
     "client:installation": "npm run start:installation --prefix pentagon-client",
-    "client:dev": "npm run start:dev --prefix pentagon-client",
-    "prepare": "husky"
+    "client:dev": "npm run start:dev --prefix pentagon-client"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +21,6 @@
     "winston": "^3.13.0"
   },
   "devDependencies": {
-    "husky": "^9.0.11",
     "jest": "^29.7.0"
   },
   "jest": {

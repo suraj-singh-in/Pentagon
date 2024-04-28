@@ -9,9 +9,10 @@ import { AppService } from './app.service';
 
 // Importing modules
 import { LoggerModule } from './logger/logger.module';
+import { HealthModule } from './health/health.module';
 
 @Module({
-  imports: [LoggerModule],
+  imports: [LoggerModule, HealthModule],
   controllers: [AppController],
   providers: [AppService],
 })

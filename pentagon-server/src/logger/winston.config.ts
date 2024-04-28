@@ -1,6 +1,6 @@
 import * as winston from 'winston';
 
-const transports = [
+export const transports = [
   new winston.transports.Console({
     format: winston.format.combine(
       // Add a timestamp to the console logs

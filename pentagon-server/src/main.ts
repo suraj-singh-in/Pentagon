@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
-import { PENTAGON_SERVER_PORT } from 'server-configurations';
+import { PENTAGON_SERVER_PORT } from '../server-configurations';
 import { Logger } from '@nestjs/common';
 
 async function bootstrap() {

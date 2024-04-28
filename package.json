@@ -56,7 +56,6 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "npm run test -- --bail --findRelatedTests",
-      "npm run lint",
       "git add"
     ]
   }

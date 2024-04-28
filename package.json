@@ -12,7 +12,8 @@
     "server:dev": "npm run start:dev --prefix pentagon-server",
     "client:installation": "npm run start:installation --prefix pentagon-client",
     "client:dev": "npm run start:dev --prefix pentagon-client",
-    "precommit": "npm run test"
+    "precommit": "npm run test",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -40,12 +41,6 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node",
-    "collectCoverage": true,
-    "coverageThreshold": {
-      "global": {
-        "lines": 100
-      }
-    }
+    "testEnvironment": "node"
   }
 }

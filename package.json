@@ -4,7 +4,8 @@
   "description": "Pentagon is a cutting-edge and versatile Content Management System (CMS) designed to empower individuals, businesses, and organizations of all sizes. With its user-friendly interface and powerful features, Pentagon makes managing your digital content a breeze.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "concurrently \"npm run server:test\"",
+    "server:test": "jest --coverage",
     "start:installation": "npm i && npm run server:installation",
     "start:dev": "concurrently \"npm run server:dev\"",
     "server:installation": "npm run start:installation --prefix pentagon-server",
@@ -18,5 +19,31 @@
   "dependencies": {
     "concurrently": "^8.2.2",
     "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "pentagon-server/src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "lines": 95
+      }
+    }
   }
 }

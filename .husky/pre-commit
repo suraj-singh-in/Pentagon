@@ -1,1 +1,10 @@
-npm test
+#!/bin/sh
+
+# Get the test coverage
+coverage=$(npm run test -- --coverage)
+
+# Check if the test coverage is less than 98%
+if [ "$coverage" -lt 98 ]; then
+  echo "Test coverage is less than 98%. Please fix the tests before committing."
+  exit 1
+fi

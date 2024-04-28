@@ -1,0 +1,8 @@
+#!/bin/sh
+
+npm run test --coverage
+
+if [ $? -ne 0 ]; then
+  echo "Code coverage must be at least 90% to commit."
+  exit 1
+fi

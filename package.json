@@ -4,15 +4,14 @@
   "description": "Pentagon is a cutting-edge and versatile Content Management System (CMS) designed to empower individuals, businesses, and organizations of all sizes. With its user-friendly interface and powerful features, Pentagon makes managing your digital content a breeze.",
   "main": "index.js",
   "scripts": {
-    "test": "concurrently \"npm run server:test\"",
-    "server:test": "jest --coverage",
+    "test:cov": "concurrently \"npm run server:test\"",
+    "server:test": "npm run test:cov --prefix pentagon-server",
     "start:installation": "npm i && npm run server:installation",
     "start:dev": "concurrently \"npm run server:dev\"",
     "server:installation": "npm run start:installation --prefix pentagon-server",
     "server:dev": "npm run start:dev --prefix pentagon-server",
     "client:installation": "npm run start:installation --prefix pentagon-client",
     "client:dev": "npm run start:dev --prefix pentagon-client",
-    "precommit": "npm run test",
     "prepare": "husky"
   },
   "keywords": [],

@@ -5,17 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:installation": "npm i && npm run server:installation && npm run client:installation",
-    "start:dev": "concurrently \"npm run server:dev\" \"npm run client:dev\" ",
-    "server:installation": "npm run start:installation --prefix server",
-    "server:dev": "npm run start:dev --prefix server",
-    "client:installation": "npm run start:installation --prefix client",
-    "client:dev": "npm run start:dev --prefix client"
+    "start:installation": "npm i && npm run server:installation",
+    "start:dev": "concurrently \"npm run server:dev\"",
+    "server:installation": "npm run start:installation --prefix pentagon-server",
+    "server:dev": "npm run start:dev --prefix pentagon-server",
+    "client:installation": "npm run start:installation --prefix pentagon-client",
+    "client:dev": "npm run start:dev --prefix pentagon-client"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "winston": "^3.13.0"
   }
 }

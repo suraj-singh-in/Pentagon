@@ -1,5 +1,6 @@
 // Importing Libs
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
 
 // Importing controllers
 import { AppController } from './app.controller';
@@ -11,8 +12,17 @@ import { AppService } from './app.service';
 import { LoggerModule } from './logger/logger.module';
 import { HealthModule } from './health/health.module';
 
+// Importing Configurations
+import { MONGODB_CONNECTION_STRING } from '../server-configurations';
+import { ClientModule } from './client/client.module';
+
 @Module({
-  imports: [LoggerModule, HealthModule],
+  imports: [
+    MongooseModule.forRoot(MONGODB_CONNECTION_STRING),
+    LoggerModule,
+    HealthModule,
+    ClientModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

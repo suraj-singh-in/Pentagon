@@ -24,7 +24,7 @@ describe('AppController', () => {
 
 describe('AppModule', () => {
   it('should comiple the module', async () => {
-    const module = Test.createTestingModule({
+    const module: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
 

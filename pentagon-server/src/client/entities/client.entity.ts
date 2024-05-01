@@ -8,10 +8,10 @@ export class Client {
   @Prop({ required: true })
   name: string;
 
-  @Prop({ required: true })
+  @Prop({ required: true, unique: true })
   slug: string;
 
-  @Prop({ required: true })
+  @Prop({ required: true, unique: true })
   clientId: string;
 }
 

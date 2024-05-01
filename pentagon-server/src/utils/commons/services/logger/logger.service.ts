@@ -7,6 +7,10 @@ export class LoggerService {
     logger.info(message, { context });
   }
 
+  infoLog(message: any, context?: string) {
+    logger.info({ message: JSON.stringify(message), context });
+  }
+
   error(message: string, trace: string, context?: string) {
     logger.error(message, { context, trace });
   }

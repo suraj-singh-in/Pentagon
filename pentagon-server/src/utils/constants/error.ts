@@ -25,3 +25,11 @@ export const ErrorMessages = {
   [ErrorCodes.GATEWAY_TIMEOUT]: 'Gateway timeout',
   [ErrorCodes.NETWORK_CONNECT_TIMEOUT_ERROR]: 'Network connect timeout error',
 };
+
+export enum MongooseErrorEnum {
+  DUPLICATE_KEY = 11000,
+}
+
+export const MongooseErrorMap = {
+  [MongooseErrorEnum.DUPLICATE_KEY]: 'Duplicate Key error',
+};

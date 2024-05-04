@@ -3,7 +3,6 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 
 import { CreateClientDto } from './dto/create-client.dto';
-import { UpdateClientDto } from './dto/update-client.dto';
 import { Client } from './entities/client.entity';
 import { SuccessResponse } from '../utils/commons/ResponseWrappers';
 import { LoggerService } from '../utils/commons/services/logger/logger.service';
@@ -26,10 +25,12 @@ export class ClientService {
       });
     } catch (error) {
       this.logger.error(
+        ClientService.name,
         'Error While Creating Client',
         error,
-        ClientService.name,
       );
+
+      throw error;
     }
   }
 }

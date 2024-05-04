@@ -3,23 +3,19 @@ import { logger } from './winston.config';
 
 @Injectable()
 export class LoggerService {
-  log(message: string, context?: string) {
+  log(context: string, message: any) {
     logger.info(message, { context });
   }
 
-  infoLog(message: any, context?: string) {
-    logger.info({ message: JSON.stringify(message), context });
-  }
-
-  error(message: string, trace: string, context?: string) {
+  error(context: string, message: any, trace: string) {
     logger.error(message, { context, trace });
   }
 
-  warn(message: string, context?: string) {
+  warn(context: string, message: any) {
     logger.warn(message, { context });
   }
 
-  debug(message: string, context?: string) {
+  debug(context: string, message: any) {
     logger.debug(message, { context });
   }
 }

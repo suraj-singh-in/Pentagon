@@ -10,14 +10,11 @@ export class RequestLogMiddleware implements NestMiddleware {
   constructor(private readonly logger: LoggerService) {}
 
   use(req: Request, res: Response, next: NextFunction) {
-    this.logger.infoLog(
-      {
-        headers: req.headers,
-        body: req.body,
-        originalUrl: req.originalUrl,
-      },
-      'RequestLogMiddleware',
-    );
+    this.logger.log(RequestLogMiddleware.name, {
+      headers: req.headers,
+      body: req.body,
+      originalUrl: req.originalUrl,
+    });
 
     // Ends middleware function execution, hence allowing to move on
     if (next) {
